@@ -1,0 +1,21 @@
+# Ignorar arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar diretórios de compilação
+/build/
+/dist/
+assets/forms
+assets/vendor
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar arquivos de banco de dados
+*.sqlite
+
+# Ignorar arquivos específicos
+secret.txt
