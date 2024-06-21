@@ -364,8 +364,7 @@ a.read-more.light.outline:hover > i {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-#header.header-scrolled .navbar a:not(:hover):not(.active),
-#header.header-scrolled .navbar a:focus {
+#header.header-scrolled .navbar a:not(:hover):not(.active) {
   color: var(--heading-color);
 }
 
@@ -468,6 +467,10 @@ a.read-more.light.outline:hover > i {
 #header.header-scrolled .mobile-nav-toggle {
   color: var(--heading-color);
 }
+.navbar-mobile .mobile-nav-toggle {
+  display: block;
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -526,7 +529,7 @@ a.read-more.light.outline:hover > i {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: var(--heading-color);
+  color: #fff;
   background-color: var(--accent-color);
 }
 
@@ -642,6 +645,11 @@ a.read-more.light.outline:hover > i {
   line-height: 1;
   font-size: 20px;
   line-height: 26px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #hero .icon-box h3 {
+    font-size: 16px;
+  }
 }
 
 #hero .icon-box h3 a {
