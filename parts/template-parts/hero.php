@@ -2,7 +2,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-      <div class="col-xl-6 col-lg-8">
+      <div class="col-xl-6 col-lg-8 px-4">
         <h1><?= $args['hero_title'] ?></h1>
         <h2><?= $args['hero_description'] ?><span>.</span></h2>
       </div>

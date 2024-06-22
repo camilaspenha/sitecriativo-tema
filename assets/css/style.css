@@ -346,6 +346,7 @@ a.read-more.light.outline:hover > i {
 
 .navbar a,
 .navbar a:focus {
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,13 +359,12 @@ a.read-more.light.outline:hover > i {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
   white-space: nowrap;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-#header.header-scrolled .navbar a:not(:hover):not(.active) {
+.header-scrolled .navbar a:not(:hover):not(.active) {
   color: var(--heading-color);
 }
 
@@ -456,7 +456,7 @@ a.read-more.light.outline:hover > i {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 42px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -464,24 +464,47 @@ a.read-more.light.outline:hover > i {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-#header.header-scrolled .mobile-nav-toggle {
+.header-scrolled .mobile-nav-toggle {
   color: var(--heading-color);
 }
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
 .navbar-mobile .mobile-nav-toggle {
   display: block;
+  position: relative;
+  z-index: 9;
 }
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
   }
-
+  .navbar {
+    -webkit-box-ordinal-group: 7;
+    -ms-flex-order: 6;
+    order: 6;
+  }
   .navbar ul {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    bottom: 15px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 0;
+    left: -100%;
   }
 }
 
-.navbar-mobile {
+/*
+.navbar-mobile ul {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -494,43 +517,55 @@ a.read-more.light.outline:hover > i {
   transition: 0.3s;
   z-index: 999;
 }
+  */
+.navbar.navbar-mobile {
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
+  order: 6;
+}
 
+.navbar-mobile ul {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  bottom: 15px;
+  left: 0;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: calc(100% - 4rem);
+}
+.navbar.navbar-mobile ul::before {
+  content: "";
+  background: rgb(26 21 31 / 80%);
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+/*
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
   color: #fff;
 }
-#header.header-scrolled .navbar-mobile i.bi-x {
-  color: #fff;
-}
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
-  overflow-y: auto;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
+  */
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: var(--heading-color);
+  padding: 20px;
+  font-size: 18px;
+  color: #fff !important;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: #fff;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
 }
 
 .navbar-mobile .getstarted,
@@ -679,8 +714,8 @@ a.read-more.light.outline:hover > i {
   }
 
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 1.4;
   }
 
   #hero h2 {
@@ -696,7 +731,11 @@ section {
   padding: 60px 0;
   overflow: hidden;
 }
-
+@media screen and (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+}
 .section-title {
   padding-bottom: 40px;
 }
@@ -867,17 +906,17 @@ section {
 --------------------------------------------------------------*/
 .cta {
   background: var(--accent-color);
+  background: -o-linear-gradient(
+    left,
+    var(--accent-color),
+    var(--accent-color-hover)
+  );
   background: -webkit-gradient(
     linear,
     left top,
     right top,
     from(var(--accent-color)),
     to(var(--accent-color-hover))
-  );
-  background: -o-linear-gradient(
-    left,
-    var(--accent-color),
-    var(--accent-color-hover)
   );
   background: linear-gradient(
     to right,
