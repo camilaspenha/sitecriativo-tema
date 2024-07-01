@@ -13,7 +13,7 @@
           <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <?= $card['icon'] ?>
-              <h3><a href="#services"><?= $card['title'] ?></a></h3>
+              <h3><a href="#services" title="Serviços - Site para <?= $card['title']?>"><?= $card['title'] ?></a></h3>
             </div>  
           </div>
         <?php endforeach; ?>

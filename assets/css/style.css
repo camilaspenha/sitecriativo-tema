@@ -33,13 +33,18 @@ body {
   color: var(--default-color);
 }
 
-a {
+a:link {
   color: var(--accent-color);
   text-decoration: none;
 }
 
 a:hover {
   color: var(--accent-color);
+  text-decoration: none;
+}
+a:active,
+a:visited {
+  color: var(--accent-color-hover);
   text-decoration: none;
 }
 
@@ -293,7 +298,7 @@ a.read-more.light.outline:hover > i {
 /*--------------------------------------------------------------
 #  Get Startet Button
 --------------------------------------------------------------*/
-.get-started-btn {
+.get-started-btn:link {
   color: #fff;
   padding: 0.875rem 2rem;
   white-space: nowrap;
@@ -306,7 +311,12 @@ a.read-more.light.outline:hover > i {
   background-color: var(--accent-color);
   border-radius: 4px;
 }
-
+.get-started-btn:visited {
+  background: #a14bf0;
+  color: #fff;
+}
+.get-started-btn:active,
+.get-started-btn:focus,
 .get-started-btn:hover {
   background: var(--accent-color-hover);
   color: #fff;

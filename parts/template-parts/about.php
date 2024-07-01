@@ -13,7 +13,7 @@ $img_url = $args['about_image']['url'] ? $args['about_image']['url'] : ASSETS . 
           <div class="section-title">
             <h2><?= $args['about_title'] ?></h2>
             <p><?= $args['about_title_description'] ?></p>
-            <h4 class="py-4"><?= $args['about_description'] ?></h4>
+            <h5 class="py-4"><?= $args['about_description'] ?></h5>
           </div>              
         </div>
       </div>

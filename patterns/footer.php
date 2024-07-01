@@ -15,7 +15,7 @@ define( 'ASSETS' , get_template_directory_uri() . '/assets');
             <div class="col-lg-3 col-md-6">
               <div class="footer-info">
                 <img src="<?= ASSETS . '/img/logo/logo_alt_w.svg' ?>" alt="Logo Branco do Site Criativo | Empresa de Criação de Sites para Pequenas Empresas e Profissionais Autônomos" class="img-fluid logo-w" width="180px">
-                <h2 class="my-4"> Design e Desenvolvimento Web </h2>
+                <h2 class="my-4">Desenvolvimento e Web Design </h2>
                 <p><strong>Telefone:</strong> <?= get_theme_mod('social-whatsapp') ?></p>
                 <p><strong>E-mail:</strong> <?= get_theme_mod('social-email') ?></p>
               </div>
@@ -43,7 +43,7 @@ define( 'ASSETS' , get_template_directory_uri() . '/assets');
                   </div>
                   <div class="member-info">
                     <h6 class="mt-3 p-0">Camila Penha</h6>
-                    <span>Web Designer e Desenvolvedora Web</span>
+                    <span>Desenvolvedora e Web Designer</span>
 
                     <div class="social-links mt-3">
                       <a title="Abre Página Externa - Github" target="_blank" href="<?= get_theme_mod('social-github') ?>" class="github"><i class="bx bxl-github"></i></a>
