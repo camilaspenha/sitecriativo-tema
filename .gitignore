@@ -7,6 +7,9 @@ Thumbs.db
 /dist/
 assets/forms
 assets/vendor
+assets/js/vite/node_modules
+assets/js/vite/dist
+assets/js/vite/index.html
 
 # Ignorar arquivos de log
 *.log
