@@ -355,8 +355,7 @@ a.read-more.light.outline:hover > i {
   position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar a {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,6 +374,13 @@ a.read-more.light.outline:hover > i {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+.navbar a:hover,
+.navbar a.active,
+.navbar li:hover > a {
+  color: var(--accent-color);
+}
+
 .header-scrolled .navbar a:not(:hover):not(.active) {
   color: var(--heading-color);
 }
@@ -384,13 +390,6 @@ a.read-more.light.outline:hover > i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: var(--accent-color);
 }
 
 .navbar .dropdown ul {
@@ -755,7 +754,7 @@ section {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
+  line-height: 1.4;
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -771,7 +770,12 @@ section {
   background: var(--accent-color);
   margin: 4px 10px 4px 0;
 }
-
+@media screen and (max-width: 440) {
+  .section-title h2::before {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 .section-title h4 {
   color: var(--default-color);
 }
