@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
     once: true,
     mirror: false,
   });
-  /* Portfolio */
+  /* Portfolio 
   new Swiper(".portfolio-details-slider", {
     speed: 400,
     loop: true,
@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
       type: "bullets",
       clickable: true,
     },
-  });
+  });*/
   /* Preloader */
   preloader?.remove();
 });

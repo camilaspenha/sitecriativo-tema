@@ -109,7 +109,7 @@ define( 'VITE_JS' , get_template_directory_uri() . '/assets/js/vite/dist/assets/
     <script src="<?= ASSETS . '/vendor/php-email-form/validate.js' ?>"></script>
 
     <!-- Main JS  -->
-    <script src="<?= VITE_JS . '/index-CffUYqV5.js' ?>"></script>
+    <script src="<?= VITE_JS . '/index-nPVtBvVv.js' ?>"></script>
 
   </body>
 </html>
